@@ -1,2 +1,5 @@
+#ignore the main.c file
 /main.c
+
+#ignore my compiled test executable file
 /stan
