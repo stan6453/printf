@@ -42,6 +42,18 @@ int _printf(const char *format, ...)
 				case 'b':
 					char_count += handle_binary(va_arg(ap,unsigned int));
 					break;
+				case 'u':
+					char_count += handle_uinteger(va_arg(ap, unsigned int));
+					break;
+				case 'o':
+					char_count += handle_octal(va_arg(ap, unsigned int));
+					break;
+				case 'x':
+					char_count += handle_hexlower(va_arg(ap, unsigned int));
+					break;
+				case 'X':
+					char_count += handle_hexupper(va_arg(ap, unsigned int));
+					break;
 				default:
 					char_count += _putchar(*(--format));
 					char_count += _putchar(*(++format));
