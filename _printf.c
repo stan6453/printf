@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 					char_count += handle_integer(va_arg(ap, int));
 					break;
 				case 'b':
-					char_count += handle_binary(va_arg(ap,unsigned int))
+					char_count += handle_binary(va_arg(ap,unsigned int));
 					break;
 				default:
 					char_count += _putchar(*(--format));
