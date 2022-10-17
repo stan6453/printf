@@ -4,7 +4,7 @@
 int _printf(const char *, ...);
 int _putchar(char c);
 int handle_string(char *);
-
+int handle_integer(int);
 
 #define BUF_SIZE 1024
 #endif

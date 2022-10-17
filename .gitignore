@@ -3,3 +3,6 @@
 
 #ignore my compiled test executable file
 /stan
+
+#ignore all .swp temp files created by vim
+#/*.swp
