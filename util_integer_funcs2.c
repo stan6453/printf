@@ -9,19 +9,9 @@ int handle_hexlower(unsigned int num)
 	unsigned int char_count = 0;
 	unsigned int rem;
 
-	/*
-	if (num < 0)
-	{
-		_putchar('-');
-		char_count++;
-		num = -(num);
-
-	}
-*/
-
 	if (num > 15)
 		char_count += handle_hexlower(num / 16);
-	
+
 	rem = num % 16;
 
 	switch (rem)
@@ -48,7 +38,7 @@ int handle_hexlower(unsigned int num)
 			_putchar(rem + '0');
 	}
 	char_count++;
-	
+
 	return (char_count);
 
 }
@@ -64,19 +54,9 @@ int handle_hexupper(unsigned int num)
 	unsigned int char_count = 0;
 	unsigned int rem;
 
-	/*
-	if (num < 0)
-	{
-		_putchar('-');
-		char_count++;
-		num = -(num);
-
-	}
-*/
-
 	if (num > 15)
 		char_count += handle_hexupper(num / 16);
-	
+
 	rem = num % 16;
 
 	switch (rem)
@@ -103,7 +83,7 @@ int handle_hexupper(unsigned int num)
 			_putchar(rem + '0');
 	}
 	char_count++;
-	
+
 	return (char_count);
 
 }

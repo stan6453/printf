@@ -33,16 +33,6 @@ int handle_binary(unsigned int num)
 {
 	unsigned int char_count = 0;
 
-	/*
-	if (num < 0)
-	{
-		_putchar('-');
-		char_count++;
-		num = -(num);
-
-	}
-*/
-
 	if (num > 1)
 		char_count += handle_binary(num / 2);
 	_putchar(num % 2 + '0');
@@ -73,16 +63,6 @@ int handle_uinteger(unsigned int num)
 int handle_octal(unsigned int num)
 {
 	unsigned int char_count = 0;
-
-	/*
-	if (num < 0)
-	{
-		_putchar('-');
-		char_count++;
-		num = -(num);
-
-	}
-*/
 
 	if (num > 7)
 		char_count += handle_octal(num / 8);

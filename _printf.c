@@ -15,13 +15,10 @@ int _printf(const char *format, ...)
 	unsigned int char_count;
 
 	va_start(ap, format);
-
 	for (; *format != '\0'; format++)
 	{
 		if (*format != '%')
-		{
 			char_count += _putchar(*format);
-		}
 		else
 		{
 			switch (*(++format))
@@ -40,7 +37,7 @@ int _printf(const char *format, ...)
 					char_count += handle_integer(va_arg(ap, int));
 					break;
 				case 'b':
-					char_count += handle_binary(va_arg(ap,unsigned int));
+					char_count += handle_binary(va_arg(ap, unsigned int));
 					break;
 				case 'u':
 					char_count += handle_uinteger(va_arg(ap, unsigned int));
@@ -60,9 +57,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-
-
-
 	va_end(ap);
 	return (char_count);
 }
