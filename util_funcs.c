@@ -54,3 +54,28 @@ int handle_integer(int num)
 	char_count++;
 	return (char_count);
 }
+
+/**
+ * handle_binary - converts unsigned int to binary and print
+ * @num: the integer to be converted to binary
+ * Return: number of character printed
+ */
+int handle_binary(int num)
+{
+	int char_count = 0;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		char_count++;
+		num = -(num);
+
+	}
+
+	if (num > 1)
+		char_count += handle_binary(num / 2);
+	_putchar(num % 2 + '0');
+	char_count++;
+	return (char_count);
+
+}
