@@ -60,10 +60,11 @@ int handle_integer(int num)
  * @num: the integer to be converted to binary
  * Return: number of character printed
  */
-int handle_binary(int num)
+int handle_binary(unsigned int num)
 {
-	int char_count = 0;
+	unsigned int char_count = 0;
 
+	/*
 	if (num < 0)
 	{
 		_putchar('-');
@@ -71,6 +72,7 @@ int handle_binary(int num)
 		num = -(num);
 
 	}
+*/
 
 	if (num > 1)
 		char_count += handle_binary(num / 2);

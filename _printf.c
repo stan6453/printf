@@ -39,6 +39,9 @@ int _printf(const char *format, ...)
 				case 'd':
 					char_count += handle_integer(va_arg(ap, int));
 					break;
+				case 'b':
+					char_count += handle_binary(va_arg(ap,unsigned int))
+					break;
 				default:
 					char_count += _putchar(*(--format));
 					char_count += _putchar(*(++format));
