@@ -51,6 +51,9 @@ int _printf(const char *format, ...)
 				case 'X':
 					char_count += handle_hexupper(va_arg(ap, unsigned int));
 					break;
+				case 'S':
+					char_count += handle_npch(va_arg(ap, char *));
+					break;
 				default:
 					char_count += _putchar(*(--format));
 					char_count += _putchar(*(++format));

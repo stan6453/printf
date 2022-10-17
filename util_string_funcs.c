@@ -28,3 +28,32 @@ int handle_string(char *ptr)
 	}
 	return (i);
 }
+
+
+int handle_npch(char *ptr)
+{
+	int i;
+	int char_count = 0;
+
+	for (i = 0; ptr[i] != '\0'; i++)
+	{
+		if (ptr[i] < 32 || ptr[i] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			char_count += 2;
+			if (ptr[i] < 16)
+			{
+				_putchar('0');
+				char_count++;
+			}
+			char_count += handle_hexupper(ptr[i]);
+		}
+		else
+		{
+		_putchar(ptr[i]);
+		char_count++;
+		}
+	}
+	return (char_count);
+}
