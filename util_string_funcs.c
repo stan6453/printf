@@ -29,7 +29,14 @@ int handle_string(char *ptr)
 	return (i);
 }
 
-
+/**
+ * handle_npch -(handles non-printable character)
+ * @ptr: the string to be printed.
+ * Description: prints an array of characters to std out,
+ * for non-printable characters, omly the hexadecimal reprisentation
+ * is printed in its palce
+ * Return: integer number of char written
+ */
 int handle_npch(char *ptr)
 {
 	int i;

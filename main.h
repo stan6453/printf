@@ -11,6 +11,13 @@ int handle_octal(unsigned int);
 int handle_hexlower(unsigned int);
 int handle_hexupper(unsigned int);
 int handle_npch(char *);
+int handle_address(unsigned int);
+int gethexsize(unsigned int);
+
+
+
+
+
 
 
 #define BUF_SIZE 1024
