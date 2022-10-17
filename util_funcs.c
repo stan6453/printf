@@ -15,13 +15,14 @@ int _putchar(char c)
 
 /**
  * handle_string - prints a string to the standard output
- * @ptr: the string to be printed. 
+ * @ptr: the string to be printed.
  * Description: prints an array of characters to the standard output.
  * Return: integer number of char written
  */
 int handle_string(char *ptr)
 {
 	int i;
+
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
 		_putchar(ptr[i]);
@@ -49,7 +50,7 @@ int handle_integer(int num)
 
 	if (num > 9)
 		char_count += handle_integer(num / 10);
-	_putchar(num % 10 +'0');
+	_putchar(num % 10 + '0');
 	char_count++;
 	return (char_count);
 }

@@ -4,8 +4,9 @@
 /**
  * _printf - prints a string to the standard output
  * @format: the string to be printed.
- * @...: list of arguments to replace conversion specifires with 
- * Description: prints an array of characters to the standard output, expanding conversion specifires as needed.
+ * @...: list of arguments to replace conversion specifires with
+ * Description: prints an array of characters to the standard output,
+ * expanding conversion specifires as needed.
  * Return: integer
  */
 int _printf(const char *format, ...)

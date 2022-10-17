@@ -5,4 +5,4 @@
 /stan
 
 #ignore all .swp temp files created by vim
-#/*.swp
+#/.*.swp
