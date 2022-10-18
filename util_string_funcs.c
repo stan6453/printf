@@ -17,12 +17,21 @@ int _putchar(char c)
 /**
  * handle_string - prints a string to the standard output
  * @ptr: the string to be printed.
- * Description: prints an array of characters to the standard output.
  * Return: integer number of char written
  */
 int handle_string(char *ptr)
 {
 	int i;
+
+	if (ptr == NULL)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		return (5);
+	}
 
 	for (i = 0; ptr[i] != '\0'; i++)
 	{
@@ -67,7 +76,11 @@ int handle_npch(char *ptr)
 	return (char_count);
 }
 
-
+/**
+ * handle_rstring - prints the reverse of a string
+ * @ptr: string to be printed in reverse
+ * Return: number of character printed
+ */
 int handle_rstring(char *ptr)
 {
 	int strlen = get_strlen(ptr);
