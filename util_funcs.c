@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <limits.h>
 /**
  * handle_integer - prints an int to the standard output
  * @num: the integer to print to std out
@@ -51,8 +52,14 @@ int handle_binary(unsigned int num)
  */
 int handle_uinteger(unsigned int num)
 {
-	num = pow(2,32) - (-num);
-	return (handle_integer(num));
+	unsigned int char_count = 0;
+ 
+	if (num > 9)
+		char_count += handle_integer(num / 10);
+	_putchar(num % 10 + '0');
+	char_count++;
+	return (char_count);
+
 }
 
 
