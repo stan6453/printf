@@ -53,7 +53,7 @@ int handle_binary(unsigned int num)
 int handle_uinteger(unsigned int num)
 {
 	unsigned int char_count = 0;
- 
+
 	if (num > 9)
 		char_count += handle_integer(num / 10);
 	_putchar(num % 10 + '0');
