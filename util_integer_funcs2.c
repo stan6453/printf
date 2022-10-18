@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * handle_hexlower - converts unsigned int to hex and print
  * @num: the integer to be converted to hex
