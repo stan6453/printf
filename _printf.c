@@ -87,10 +87,12 @@ int handle_conversion(va_list ap, const char **format)
 			 * char_count += handle_address(va_arg(ap, void *));
 			*/
 			break;
-		case '\0':
-			_putchar(*(--*format));
-			char_count++;
-			break;
+			/*
+			 * case '\0':
+			 * _putchar(*(--*format));
+			 * char_count++;
+			 * break;
+			*/
 		default:
 			_putchar(*(--*format));
 			_putchar(*(++*format));
