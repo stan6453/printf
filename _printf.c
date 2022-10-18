@@ -77,6 +77,9 @@ int handle_conversion(va_list ap, const char **format)
 		case 'r':
 			char_count += handle_rstring(va_arg(ap, char *));
 			break;
+		case 'R':
+			char_count += handle_rot13string(va_arg(ap, char *));
+			break;
 		case 'p':
 			/*
 			 * char_count += handle_address(va_arg(ap, void *));

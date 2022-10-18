@@ -78,6 +78,38 @@ int handle_rstring(char *ptr)
 	return char_count;
 }
 
+/**
+ * handle_rot13string - encode a string to rot13 and print
+ * @ptr: string to be printed in rot13
+ * Return: number of character printed
+ */
+int handle_rot13string(char *ptr)
+{
+	int i;
+	int rot;
+
+	for (i = 0; ptr[i] != '\0'; i++)
+	{
+		if (ptr[i] >= 'A' && ptr[i] <= 'Z')
+		{
+			rot = ptr[i] + 13;
+			if (rot > 'Z')
+				rot = rot - 26;
+			_putchar(rot);
+		}
+		else if(ptr[i] >= 'a' && ptr[i] <= 'z')
+		{
+			rot = ptr[i] + 13;
+			if (rot > 'z')
+				rot = rot - 26;
+			_putchar(rot);
+		}
+		else
+			_putchar(ptr[i]);
+	}
+	return (i);
+}
+
 
 /**
  * get_strlen - finds length of a string
