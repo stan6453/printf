@@ -101,6 +101,8 @@ int handle_address(void *num, void *num2)
 	unsigned long char_count = 0;
 	void *rem;
 
+	if (num == NULL)
+		return (0);
 	if ((unsigned long)num == (unsigned long)num2)
 	{
 		_putchar('0');
@@ -111,7 +113,6 @@ int handle_address(void *num, void *num2)
 		char_count += handle_address((void *)((unsigned long)num / 16), num2);
 
 	rem = (void *)((unsigned long)num % 16);
-
 	switch ((unsigned long)rem)
 	{
 		case 10:
