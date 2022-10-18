@@ -40,9 +40,8 @@ int _printf(const char *format, ...)
 int handle_conversion(va_list ap, const char **format)
 {
 	int char_count = 0;
-	int ch = *(++*format);
 
-	switch (ch)
+	switch (*(++*format))
 	{
 		case 'c':
 			_putchar(va_arg(ap, int));
@@ -92,8 +91,9 @@ int handle_conversion(va_list ap, const char **format)
 			--*format;
 			return (0);
 		default:
-			_putchar(ch);
-			char_count++;
+			_putchar(*(--*format));
+			_putchar(*(++*format));
+			char_count += 2;
 			break;
 	}
 	return (char_count);
