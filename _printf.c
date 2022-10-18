@@ -31,7 +31,12 @@ int _printf(const char *format, ...)
 
 
 
-
+/**
+ * handle_conversion - this fn hadles all the specific conversion modifiers
+ * @ap: the variable arguments
+ * @format: pointer to the format (type char *) argument from the printf fn
+ * Return: number of character printed
+ */
 int handle_conversion(va_list ap, const char **format)
 {
 	int char_count = 0;
