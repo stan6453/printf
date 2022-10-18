@@ -88,11 +88,13 @@ int handle_conversion(va_list ap, const char **format)
 			*/
 			break;
 		case '\0':
-			--*format;
+			_putchar(*(--*format));
+			char_count++;
 			break;
 		default:
-			_putchar(*(*format));
-			char_count += 1;
+			_putchar(*(--*format));
+			_putchar(*(++*format));
+			char_count += 2;
 			break;
 	}
 	return (char_count);
