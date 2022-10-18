@@ -107,8 +107,6 @@ int handle_address(void *num, void *num2)
 		_putchar('x');
 		char_count += 2;
 	}
-
-
 	if (num > (void *)15)
 		char_count += handle_address((void *)((unsigned long)num / 16), num2);
 
