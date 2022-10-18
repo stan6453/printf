@@ -40,7 +40,9 @@ int _printf(const char *format, ...)
 int handle_conversion(va_list ap, const char **format)
 {
 	int char_count = 0;
+	void *for_address;
 
+	for_address = (void *)0;
 	switch (*(++*format))
 	{
 		case 'c':
@@ -83,9 +85,8 @@ int handle_conversion(va_list ap, const char **format)
 			char_count += handle_rot13string(va_arg(ap, char *));
 			break;
 		case 'p':
-			/*
-			 * char_count += handle_address(va_arg(ap, void *));
-			*/
+			for_address = va_arg(ap, void *);
+			char_count += handle_address(for_address, for_address);
 			break;
 		case '\0':
 			_putchar(*(--*format));

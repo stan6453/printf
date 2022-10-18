@@ -89,3 +89,53 @@ int handle_hexupper(unsigned int num)
 }
 
 
+
+/**
+ * handle_address - converts unsigned int to hex and print
+ * @num: the integer to be converted to hex
+ * Return: number of character printed
+ */
+int handle_address(void *num, void *num2)
+{
+	unsigned long char_count = 0;
+	void *rem;
+
+	if ((unsigned long)num == (unsigned long)num2)
+	{
+		_putchar('0');
+		_putchar('x');
+	}
+
+
+	if (num > (void *)15)
+		char_count += handle_address((void *)((unsigned long)num / 16), num2);
+
+	rem = (void *)((unsigned long)num % 16);
+
+	switch ((unsigned long)rem)
+	{
+		case 10:
+			_putchar('a');
+			break;
+		case 11:
+			_putchar('b');
+			break;
+		case 12:
+			_putchar('c');
+			break;
+		case 13:
+			_putchar('d');
+			break;
+		case 14:
+			_putchar('e');
+			break;
+		case 15:
+			_putchar('f');
+			break;
+		default:
+			_putchar((unsigned long)rem + '0');
+	}
+	char_count++;
+
+	return (char_count);
+}
