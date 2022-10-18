@@ -11,7 +11,7 @@ int handle_octal(unsigned int);
 int handle_hexlower(unsigned int);
 int handle_hexupper(unsigned int);
 int handle_npch(char *);
-int handle_address(unsigned int);
+int handle_address(void *);
 int gethexsize(unsigned int);
 
 
