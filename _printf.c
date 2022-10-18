@@ -40,17 +40,20 @@ int _printf(const char *format, ...)
 int handle_conversion(va_list ap, const char **format)
 {
 	int char_count = 0;
+	int ch = *(++*format);
 
-	switch (*(++*format))
+	switch (ch)
 	{
 		case 'c':
-			char_count += _putchar(va_arg(ap, int));
+			_putchar(va_arg(ap, int));
+			char_count++;
 			break;
 		case 's':
 			char_count += handle_string(va_arg(ap, char *));
 			break;
 		case '%':
-			char_count += _putchar('%');
+			_putchar('%');
+			char_count++;
 			break;
 		case 'i':
 		case 'd':
@@ -85,9 +88,13 @@ int handle_conversion(va_list ap, const char **format)
 			 * char_count += handle_address(va_arg(ap, void *));
 			*/
 			break;
+		case '\0':
+			--*format;
+			return (0);
 		default:
-			char_count += _putchar(*(--*format));
-			char_count += _putchar(*(++*format));
+			_putchar(ch);
+			char_count++;
+			break;
 	}
 	return (char_count);
 }
