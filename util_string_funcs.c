@@ -75,7 +75,7 @@ int handle_rstring(char *ptr)
 
 	for (strlen--; strlen >= 0; strlen--)
 		_putchar(ptr[strlen]);
-	return (char_count);
+	return char_count;
 }
 
 /**
@@ -97,7 +97,7 @@ int handle_rot13string(char *ptr)
 				rot = rot - 26;
 			_putchar(rot);
 		}
-		else if (ptr[i] >= 'a' && ptr[i] <= 'z')
+		else if(ptr[i] >= 'a' && ptr[i] <= 'z')
 		{
 			rot = ptr[i] + 13;
 			if (rot > 'z')
@@ -121,7 +121,7 @@ int get_strlen(char *str)
 {
 	int i;
 
-	if (str == NULL)
+	if(str == NULL)
 		return (0);
 
 	for (i = 0; str[i] != '\0'; i++)
