@@ -105,6 +105,7 @@ int handle_address(void *num, void *num2)
 	{
 		_putchar('0');
 		_putchar('x');
+		char_count += 2;
 	}
 
 
