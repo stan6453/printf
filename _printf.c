@@ -74,6 +74,9 @@ int handle_conversion(va_list ap, const char **format)
 		case 'S':
 			char_count += handle_npch(va_arg(ap, char *));
 			break;
+		case 'r':
+			char_count += handle_rstring(va_arg(ap, char *));
+			break;
 		case 'p':
 			/*
 			 * char_count += handle_address(va_arg(ap, void *));

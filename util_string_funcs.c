@@ -1,5 +1,7 @@
 #include <unistd.h>
 #include "main.h"
+
+int get_strlen(char *str);
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -63,4 +65,34 @@ int handle_npch(char *ptr)
 		}
 	}
 	return (char_count);
+}
+
+
+int handle_rstring(char *ptr)
+{
+	int strlen = get_strlen(ptr);
+	int char_count = strlen;
+
+	for (strlen--; strlen >= 0; strlen--)
+		_putchar(ptr[strlen]);
+	return char_count;
+}
+
+
+/**
+ * get_strlen - finds length of a string
+ * @str: string to find its length
+ * Description: finds length of a string (not including null character)
+ * Return: length of string
+ */
+int get_strlen(char *str)
+{
+	int i;
+
+	if(str == NULL)
+		return (0);
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
 }

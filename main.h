@@ -13,6 +13,7 @@ int handle_hexupper(unsigned int);
 int handle_npch(char *);
 int handle_address(void *);
 int gethexsize(unsigned int);
+int handle_rstring(char *);
 
 
 
