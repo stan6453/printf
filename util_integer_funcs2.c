@@ -93,6 +93,7 @@ int handle_hexupper(unsigned int num)
 /**
  * handle_address - converts unsigned int to hex and print
  * @num: the integer to be converted to hex
+ * @num2: variable to knw when to print initianls
  * Return: number of character printed
  */
 int handle_address(void *num, void *num2)
@@ -136,6 +137,5 @@ int handle_address(void *num, void *num2)
 			_putchar((unsigned long)rem + '0');
 	}
 	char_count++;
-
 	return (char_count);
 }
