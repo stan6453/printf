@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 /**
  * handle_integer - prints an int to the standard output
  * @num: the integer to print to std out
@@ -50,6 +51,7 @@ int handle_binary(unsigned int num)
  */
 int handle_uinteger(unsigned int num)
 {
+	num = pow(2,32) - (-num);
 	return (handle_integer(num));
 }
 
