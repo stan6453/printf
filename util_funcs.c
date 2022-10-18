@@ -1,6 +1,4 @@
 #include "main.h"
-#include <math.h>
-#include <limits.h>
 /**
  * handle_integer - prints an int to the standard output
  * @num: the integer to print to std out
