@@ -103,7 +103,14 @@ int handle_address(void *num, void *num2)
 	void *rem;
 
 	if (num == NULL)
-		return (0);
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		return (5);
+	}
 	if ((unsigned long)num == (unsigned long)num2)
 	{
 		_putchar('0');
