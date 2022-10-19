@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
  */
 int handle_conversion(va_list ap, const char **format)
 {
-	int char_count = 0;
+	unsigned int char_count = 0;
 	void *for_address;
 
 	for_address = (void *)0;
