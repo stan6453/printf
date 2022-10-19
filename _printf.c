@@ -98,7 +98,7 @@ int handle_conversion(va_list ap, const char **format)
 			--*format;
 			break;
 		default:
-			_putchar(*(*format));
+			_putchar(*(++*format));
 			char_count++;
 			break;
 	}
