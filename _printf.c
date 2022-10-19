@@ -93,7 +93,8 @@ int handle_conversion(va_list ap, const char **format)
 			char_count += handle_address(for_address, for_address);
 			break;
 		case '\0':
-			--*format;
+			_putchar(*(--*format));
+			char_count++;
 			break;
 		default:
 			_putchar(*(--*format));
