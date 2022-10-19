@@ -16,10 +16,7 @@ int _printf(const char *format, ...)
 	unsigned int char_count = 0;
 
 	if (format == NULL)
-	{
-		_putchar('\n');
 		return (0);
-	}
 
 	va_start(ap, format);
 	for (; *format != '\0'; format++)
@@ -96,8 +93,7 @@ int handle_conversion(va_list ap, const char **format)
 			char_count += handle_address(for_address, for_address);
 			break;
 		case '\0':
-			_putchar(*(--*format));
-			char_count++;
+			--*format;
 			break;
 		default:
 			_putchar(*(--*format));
