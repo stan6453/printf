@@ -22,7 +22,8 @@ int _printf(const char *format, ...)
 		_putchar('i');
 		_putchar('l');
 		_putchar(')');
-		return (5);
+		_putchar('\n');
+		return (6);
 	}
 
 	va_start(ap, format);
