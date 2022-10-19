@@ -16,7 +16,15 @@ int _printf(const char *format, ...)
 	unsigned int char_count = 0;
 
 	if (format == NULL)
-		return (0);
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		_putchar('\n');
+		return (6);
+	}
 
 	va_start(ap, format);
 	for (; *format != '\0'; format++)
