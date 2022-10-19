@@ -13,7 +13,7 @@ int handle_conversion(va_list ap, const char **format);
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int char_count = 0;
+	int char_count = 0;
 
 	if (format == NULL)
 		return (0);
@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
  */
 int handle_conversion(va_list ap, const char **format)
 {
-	unsigned int char_count = 0;
+	int char_count = 0;
 	void *for_address;
 
 	for_address = (void *)0;
