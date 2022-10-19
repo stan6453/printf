@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib>
 #include <stdarg.h>
 int handle_conversion(va_list ap, const char **format);
 /**
@@ -13,6 +14,9 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	unsigned int char_count = 0;
+
+	if (handle_null(format))
+		return(5);
 
 	va_start(ap, format);
 	for (; *format != '\0'; format++)
