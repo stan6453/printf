@@ -13,17 +13,10 @@ int handle_conversion(va_list ap, const char **format);
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	unsigned int char_count = 0;
+	int char_count = 0;
 
 	if (format == NULL)
-	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('i');
-		_putchar('l');
-		_putchar(')');
-		return (5);
-	}
+		return (0);
 
 	va_start(ap, format);
 	for (; *format != '\0'; format++)
@@ -100,8 +93,7 @@ int handle_conversion(va_list ap, const char **format)
 			char_count += handle_address(for_address, for_address);
 			break;
 		case '\0':
-			_putchar(*(--*format));
-			char_count++;
+			--*format;
 			break;
 		default:
 			_putchar(*(--*format));
