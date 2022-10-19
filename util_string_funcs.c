@@ -27,11 +27,10 @@ int handle_string(char *ptr)
 	{
 		_putchar('(');
 		_putchar('n');
-		_putchar('u');
-		_putchar('l');
+		_putchar('i');
 		_putchar('l');
 		_putchar(')');
-		return (6);
+		return (5);
 	}
 
 	for (i = 0; ptr[i] != '\0'; i++)
