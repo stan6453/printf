@@ -13,7 +13,7 @@ int handle_conversion(va_list ap, const char **format);
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int char_count = 0;
+	unsigned int char_count = 0;
 
 	if (format == NULL)
 		return (0);
