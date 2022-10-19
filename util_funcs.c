@@ -8,18 +8,22 @@
 int handle_integer(int num)
 {
 	int char_count = 0;
-
+	int add1 = 0;
 	if (num < 0)
 	{
 		_putchar('-');
 		char_count++;
+		num++;
 		num = -1 * num;
-
+		add1 = 1;
 	}
 
 	if (num > 9)
 		char_count += handle_integer(num / 10);
-	_putchar(num % 10 + '0');
+	if (add1)
+		_putchar((num % 10) + '0' + 1);
+	else
+		_putchar(num % 10 + '0');
 	char_count++;
 	return (char_count);
 }
