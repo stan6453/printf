@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	int char_count = 0;
 
 	if (format == NULL)
-		return (0);
+		return (-1);
 
 	va_start(ap, format);
 	for (; *format != '\0'; format++)
