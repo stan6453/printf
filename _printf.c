@@ -99,7 +99,7 @@ int handle_conversion(va_list ap, const char **format)
 			break;
 		default:
 			_putchar(*(*format));
-			char_count += 2;
+			char_count++;
 			break;
 	}
 	return (char_count);
