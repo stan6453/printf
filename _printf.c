@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	unsigned int char_count = 0;
 
-	if (ptr == NULL)
+	if (format == NULL)
 	{
 		_putchar('(');
 		_putchar('n');
