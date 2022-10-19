@@ -15,7 +15,7 @@ int handle_address(void *, void *);
 int gethexsize(unsigned int);
 int handle_rstring(char *);
 int handle_rot13string(char *);
-
+int handle_null(void *);
 
 
 

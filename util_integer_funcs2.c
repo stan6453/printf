@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * handle_hexlower - converts unsigned int to hex and print
  * @num: the integer to be converted to hex
@@ -89,8 +90,7 @@ int handle_hexupper(unsigned int num)
 
 }
 
-
-
+void print_hex_char(void *);
 /**
  * handle_address - converts unsigned int to hex and print
  * @num: the integer to be converted to hex
@@ -102,15 +102,8 @@ int handle_address(void *num, void *num2)
 	unsigned long char_count = 0;
 	void *rem;
 
-	if (num == NULL)
-	{
-		_putchar('(');
-		_putchar('n');
-		_putchar('i');
-		_putchar('l');
-		_putchar(')');
+	if (handle_null(num))
 		return (5);
-	}
 	if ((unsigned long)num == (unsigned long)num2)
 	{
 		_putchar('0');
@@ -119,8 +112,40 @@ int handle_address(void *num, void *num2)
 	}
 	if (num > (void *)15)
 		char_count += handle_address((void *)((unsigned long)num / 16), num2);
-
 	rem = (void *)((unsigned long)num % 16);
+	print_hex_char(rem);
+	char_count++;
+	return (char_count);
+}
+
+/**
+ * handle_null - handle null arguments
+ * (prints (nil) and return 5 if null else return 0)
+ * @ptr: pointer to check
+ * Return: number of character printed
+ */
+int handle_null(void *ptr)
+{
+	if (ptr == NULL)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		return (5);
+	}
+	return (0);
+}
+
+
+/**
+ * print_hex_char - prints a char of hex value
+ * @rem: pointer to check
+ * Return: number of character printed
+ */
+void print_hex_char(void *rem)
+{
 	switch ((unsigned long)rem)
 	{
 		case 10:
@@ -144,6 +169,4 @@ int handle_address(void *num, void *num2)
 		default:
 			_putchar((unsigned long)rem + '0');
 	}
-	char_count++;
-	return (char_count);
 }
