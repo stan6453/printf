@@ -13,7 +13,7 @@ int handle_integer(int num)
 	{
 		_putchar('-');
 		char_count++;
-		num = -(num);
+		num = -1 * num;
 
 	}
 
