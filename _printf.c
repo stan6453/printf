@@ -15,15 +15,14 @@ int _printf(const char *format, ...)
 	va_list ap;
 	unsigned int char_count = 0;
 
-	if (format == NULL)
+	if (ptr == NULL)
 	{
 		_putchar('(');
 		_putchar('n');
 		_putchar('i');
 		_putchar('l');
 		_putchar(')');
-		_putchar('\n');
-		return (6);
+		return (5);
 	}
 
 	va_start(ap, format);
